@@ -96,6 +96,56 @@ main{
 
 }
 
+
+.formContact{
+    grid-template-areas: 
+    "name"
+    "email"
+    "telephone"
+    "message"
+    "submit"
+    ;
+
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px;
+    border: 10px solid aliceblue;
+
+    display: grid;
+    margin: auto;
+    width: fit-content;
+}
+
+.inputName{
+    
+    margin: auto;
+    grid-area: "name";
+    display: block;
+}
+
+
+.inputEmail{
+    
+    margin: auto;
+    grid-area: "email";
+    display: block;
+}
+
+.inputTel{
+    margin: auto;
+    grid-area: "telephone";
+    display: block;
+}
+
+.inputMessage{
+    grid-area: "telephone";
+    display: block;
+}
+
+.buttonSubmit{
+    height: 20px;
+    width: 50px;
+}
+
 footer{
     grid-area: "footer";
     background: linear-gradient(white,lightblue, grey);
