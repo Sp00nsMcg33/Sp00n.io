@@ -1,0 +1,103 @@
+
+body{
+    margin:0px;
+    display: grid;
+    grid-template-areas:
+     "header" 
+     "main" 
+     "footer";
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr;
+    
+}
+
+
+header{
+    grid-area: "header";
+    background: linear-gradient(grey, lightblue,white);
+    min-height: 50px;
+    max-height: 360px;
+    
+}
+
+
+.headerContent{
+
+    display:flex;
+    flex-direction: row;
+}
+
+
+.headerText{
+
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width:60%;
+
+}
+
+.name{   
+    margin: auto;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-shadow: 2px 2px 4px silver;
+}
+
+.title{
+    font-family: "Playwrite DK Loopet Guides", serif;
+    margin: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.headerImage
+{
+    padding-right: 0;
+    margin-left: auto;
+    border-radius: 5px;
+    
+}
+
+
+
+.navMenu{
+
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 100px;
+    
+
+}
+
+.navMenu a{
+    color: black;
+    margin: auto;
+    width: 25%;
+    text-align: center;
+    background:radial-gradient(circle at left, transparent 80%, black 82%),radial-gradient(circle at right, transparent 80%, lightblue);
+    border-radius: 10px 10px 10px 0px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.navMenu a:hover{
+    color: darkcyan;
+    outline: 2px solid silver;
+    background:radial-gradient(circle at left, transparent 80%, grey 82%),radial-gradient(circle at right, transparent 80%, lightblue);
+}   
+
+
+main{
+    grid-area: "main";
+
+}
+
+footer{
+    grid-area: "footer";
+    background: linear-gradient(white,lightblue, grey);
+    min-height: 100px;
+}
