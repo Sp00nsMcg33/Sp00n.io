@@ -11,12 +11,12 @@
 
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!--name font-->
+<!--Title font-->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
 
-<!--title font-->
+<!--subtitle font-->
 <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet+Guides&display=swap" rel="stylesheet">
 </head>
 
@@ -29,8 +29,8 @@
         <div class="headerContent"> <!--div for layour purpose, so that nav menu sits below headertext-->
 
             <div class="headerText"> <!-- group for Name and Title -->
-                <h1 class="name"> Sp00nsMcg33 change</h1>
-                <h2 class="title">Please take a look ...</h2> 
+                <h1>Sp00nsMcg33 </h1>
+                <h2>Please take a look ...</h2> 
             </div>
 
             <img src="./assets/PlaceholderGuy.png" class="headerImage" > <!--load an image to display in the header -->
@@ -39,55 +39,100 @@
 
 
         <nav class="navMenu">
-                <a href="#">First Page</a>
-                <a href="#">Second Page</a>
-                <a href="#">Third Page</a>
-                <a href="#">Fourth Page</a>
+                <a href="#aboutMe">About me</a>
+                <a href="#">Gallery</a>
+                <a href="#">Projects</a>
+                <a href="#contactMe">Contact me</a>
         </nav>
 
 
     </header>
 
     <main>
-        <div>
-            This is the main body
-        </div>
 
-        <section>
-            <h2> About me</h2>
+        <section class="aboutMe">
+            <h2>About me</h2>
 
             <p> I am a level 4 software design apprentice and this is a short website about me. 
                 I enjoy creating working code and solving problems. 
                 I hope to use these skill in the future to create meaningful code solutions. </p>
 
+            <p>
+                I care for several creatures. They are visible in the gallery. 
+                They are; 
+
+            </p>
+                <!--List of the animal , each entry links to the respective photo-->
+            <ul class="listOfAnimal">
+                <li><a href="dogPhoto"><h5>Obi the jack russel terrier</h5></a></li>
+                <li><a href="rabbitPhoto"><h5>Brownie the rabbit</h5></a></li>
+                <li><a href="geckoPhoto"><h5>Breadstick the crested gecko</h5></a></li>
+            </ul>
+
+            <p> I also enjoy PC and tabletop gaming, cycling or kayaking. 
+                Some notable places I have been while persuing these sports I have good memories of. 
+                I have shared the photos to prove it! 
+            </p>
+
+            <ul class = "listOfPlaces">
+                <li><a href="kayakPhoto"></a><h5>Cornwall on the lizard penisular</h5></li>
+                <li><a href="bikePhoto"></a><h5>Wales and the Breacon Beacons</h5></li>
+            </ul>
         </section>
 
-        <section class="contact">
+
+        <section id="Gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <div class="topRow">
+                    <img class="galleryImg" src="assets/dogPhoto.JPG" id="dogPhoto">
+                    <img class="galleryImg" src="assets/rabbitPhoto.JPG" id="rabbitPhoto">
+                    <img class="galleryImg" src="assets/geckoPhoto.jpg" id="geckoPhoto">
+                </div>
+                <div class="middleRow">
+                    <img class="galleryImg" src="assets/bikePhoto.jpg" id = "bikePhoto">
+                    <img class="galleryImg" src="assets/kayakPhoto.jpg" id="kayakPhoto">
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="projects" id="projects">
+            <ul>
+                <li><div>
+                    <h4>Machine Vision inspection</h4>
+                    <p>For this project, I worked to create a working front end and back end desktop application
+                        which inspected medical plates for defects and tolerance. 
+                        This utilised a USB 3 camera, and a .NET based application. 
+                        The system captured an image from a triggerd camera , which was then displayed. 
+                        open EVision, a machine vision library, was used to then locate and check the part in the image. 
+                        A pass or fail was given and this was relayed out to an indutrial light which illuminated red or green accordingly.
+                        The application was able to process up to 10 images a second. 
+                    </p>
+                </div></li>
+            </ul>>
+        </section>
+
+
+        <section class="contact" id="contactMe">
             
             <p>If you would like to get in touch please use the below form</p>
+            <p>Or send me an email : <a type="email"></a></p>
+            
 
             <form class="formContact">
-                <div class="inputName">
                     <label>Name</label>
                     <input type="text">
-                </div>
-                <div class="inputEmail">
                     <label>Email</label>
                     <input type="Email">
-                    </div>
-                <div class="inputTel">
                     <label>Telephone</label>
                     <input type="tel">
-                </div>
-                <div class="inputMessage">    
                     <label>Message</label>
                     <textarea>Enter text here...</textarea>
+                    <button class="buttonSubmit"> submit</button>
                 </div>
 
-                <div>
-                    <label>Submit</label>
-                    <button class="buttonSubmit"></button>
-                </div>
             </form>
         </section>
 

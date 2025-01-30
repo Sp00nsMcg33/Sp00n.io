@@ -11,6 +11,10 @@ body{
     
 }
 
+section{
+    padding-bottom: 100px;
+}
+
 
 header{
     grid-area: "header";
@@ -37,7 +41,8 @@ header{
 
 }
 
-.name{   
+/*font used for the subtitle of the webpage*/
+h1{   
     margin: auto;
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
@@ -46,11 +51,26 @@ header{
     text-shadow: 2px 2px 4px silver;
 }
 
-.title{
+/*Font used for the top-most text of the web page */
+h2{
     font-family: "Playwrite DK Loopet Guides", serif;
     margin: auto;
     font-weight: 400;
     font-style: normal;
+    padding: 20px;
+}
+
+
+p{
+
+}
+
+li a{
+    text-decoration: none;
+    color: lightseagreen;
+}
+li a:hover{
+    color: forestgreen;
 }
 
 .headerImage
@@ -67,7 +87,8 @@ header{
 
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 90%;
+    margin:auto;
     height: 100px;
     
 
@@ -76,18 +97,21 @@ header{
 .navMenu a{
     color: black;
     margin: auto;
-    width: 25%;
+    width: 100px;
     text-align: center;
-    background:radial-gradient(circle at left, transparent 80%, black 82%),radial-gradient(circle at right, transparent 80%, lightblue);
-    border-radius: 10px 10px 10px 0px;
+    /*background:radial-gradient(circle at left, transparent 80%, black 82%),radial-gradient(circle at right, transparent 80%, lightblue);
+    border-radius: 10px 10px 10px 0px;*/
+    background-color: aliceblue;
+    box-shadow: 0px 0px 8px 3px grey;
+    border-radius: 10px;
     height: 30px;
     line-height: 30px;
 }
 
 .navMenu a:hover{
     color: darkcyan;
-    outline: 2px solid silver;
-    background:radial-gradient(circle at left, transparent 80%, grey 82%),radial-gradient(circle at right, transparent 80%, lightblue);
+    background-color: rgb(226, 234, 241);
+   
 }   
 
 
@@ -97,55 +121,51 @@ main{
 }
 
 
-.formContact{
-    grid-template-areas: 
-    "name"
-    "email"
-    "telephone"
-    "message"
-    "submit"
-    ;
 
-    grid-template-rows: 50px 50px 50px 50px 50px;
-    grid-template-rows: 50px;
+/* container for the image gallery collection*/
+.gallery{
+    margin: auto;
+    width: 100%;
+    display: inline;
+}
+
+/*The image collection shown in the gallery*/
+.galleryImg{
+    display: inline;
+    margin: 1%;
+    width: 20%;
+    border-radius: 30px;
+    box-shadow: 1px 3px 8px 3px grey;
+}
+
+/*Container for the contact form */
+.formContact{
+
+    grid-template-columns: 100px 300px;
     border: 10px solid aliceblue;
 
     display: grid;
+    row-gap: 10px;
+    column-gap: 5px;
+
     margin: auto;
     width: fit-content;
 }
 
-.inputName{
-    
-    margin: auto;
-    grid-area: "name";
-    display: block;
+.formContact label{
+    padding:5px;
+
 }
 
-
-.inputEmail{
-    
-    margin: auto;
-    grid-area: "email";
-    display: block;
-}
-
-.inputTel{
-    margin: auto;
-    grid-area: "telephone";
-    display: block;
-}
-
-.inputMessage{
-    grid-area: "telephone";
-    display: block;
+.formContact textarea{
+    height: 200px;
 }
 
 .buttonSubmit{
-    height: 20px;
-    width: 50px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    margin: auto;
 }
-
 footer{
     grid-area: "footer";
     background: linear-gradient(white,lightblue, grey);
