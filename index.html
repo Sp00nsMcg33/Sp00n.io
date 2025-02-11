@@ -64,9 +64,9 @@
             </p>
                 <!--List of the animal , each entry links to the respective photo-->
             <ul class="listOfAnimal">
-                <li><a href="dogPhoto"><h5>Obi the jack russel terrier</h5></a></li>
-                <li><a href="rabbitPhoto"><h5>Brownie the rabbit</h5></a></li>
-                <li><a href="geckoPhoto"><h5>Breadstick the crested gecko</h5></a></li>
+                <li><a href="#dogPhoto"><h5>Obi the jack russel terrier</h5></a></li>
+                <li><a href="#rabbitPhoto"><h5>Brownie the rabbit</h5></a></li>
+                <li><a href="#geckoPhoto"><h5>Breadstick the crested gecko</h5></a></li>
             </ul>
 
             <p> I also enjoy PC and tabletop gaming, cycling or kayaking. 
@@ -84,12 +84,9 @@
         <section id="Gallery">
             <h2>Gallery</h2>
             <div class="gallery">
-                <div class="topRow">
                     <img class="galleryImg" src="assets/dogPhoto.JPG" id="dogPhoto">
                     <img class="galleryImg" src="assets/rabbitPhoto.JPG" id="rabbitPhoto">
                     <img class="galleryImg" src="assets/geckoPhoto.jpg" id="geckoPhoto">
-                </div>
-                <div class="middleRow">
                     <img class="galleryImg" src="assets/bikePhoto.jpg" id = "bikePhoto">
                     <img class="galleryImg" src="assets/kayakPhoto.jpg" id="kayakPhoto">
                 </div>
@@ -111,7 +108,7 @@
                         The application was able to process up to 10 images a second. 
                     </p>
                 </div></li>
-            </ul>>
+            </ul>
         </section>
 
 
@@ -122,15 +119,23 @@
             
 
             <form class="formContact">
+                    <label>Choice</label>
+                    <select class="formInput selectChoice">
+                        <option value="option0">First option</option>
+                        <option value="option1">Second option</option>
+                        <option value="option2">Third option</option>
+                    </select>
                     <label>Name</label>
-                    <input type="text">
+                    <input type="text" class="formInput" pattern="[A-z]+" required>
                     <label>Email</label>
-                    <input type="Email">
+                    <input type="Email" class="formInput" required>
+                    <label>Password</label>
+                    <input type="Password" class="formInput">
                     <label>Telephone</label>
-                    <input type="tel">
+                    <input type="tel" class="formInput">
                     <label>Message</label>
-                    <textarea>Enter text here...</textarea>
-                    <button class="buttonSubmit"> submit</button>
+                    <textarea class="formInput">Enter text here...</textarea>
+                    <button class="buttonSubmit formInput" > submit</button>
                 </div>
 
             </form>
