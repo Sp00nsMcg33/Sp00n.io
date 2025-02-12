@@ -1,6 +1,20 @@
 
 body{
     margin:0px;
+    display: grid;
+
+    /*the main layout grid for the site page*/
+    grid-template-areas:
+    "nav menu"
+     "header" 
+     "main" 
+     "footer";
+
+     /*logic to define the proportions for the site, 
+     so that it can display correctly*/
+    grid-template-rows: 1fr 1f 1fr 3fr 1fr;
+    grid-template-columns: 1fr;
+    
 }
 
 section{
@@ -9,6 +23,7 @@ section{
 
 
 header{
+    grid-area: "header";
     background: linear-gradient(grey, lightblue,white);
     min-height: 50px;
     max-height: 360px;
@@ -51,7 +66,6 @@ h2{
     padding: 20px;
 }
 
-
 li a{
     text-decoration: none;
     color: lightseagreen;
@@ -81,23 +95,19 @@ li a:hover{
 
 }
 
+
+/*The nav menu button */
 .navMenu a{
     color: black;
     margin: auto;
     width: 100px;
     text-align: center;
-    /*background:radial-gradient(circle at left, transparent 80%, black 82%),radial-gradient(circle at right, transparent 80%, lightblue);
-    border-radius: 10px 10px 10px 0px;*/
     background: transparent;
     border-radius: 10px;
     height: 30px;
     line-height: 30px;
 }
 
-/*
-Here the Psuedo-class :hover has been used to highlight the selected tab of the nav menu
-works by checking the state of the navMenu object and when triggered by mouse-over applies the style changes 
-*/
 .navMenu a:hover{
     color: darkcyan;
     background-color: rgb(226, 234, 241);
@@ -105,76 +115,41 @@ works by checking the state of the navMenu object and when triggered by mouse-ov
 }   
 
 
+main{
+    grid-area: "main";
+
+}
+
 
 
 /* container for the image gallery collection*/
 .gallery{
     margin: auto;
     width: 100%;
-    display: grid;
-    grid-template-areas: 
-    "row1"
-    "row2";
-    grid-template-columns: 1fr 1fr 1fr;
-    
+    display: inline;
 }
 
 /*The image collection shown in the gallery*/
 .galleryImg{
-    
+    display: inline;
+    margin: 1%;
+    width: 20%;
     border-radius: 30px;
     box-shadow: 1px 3px 8px 3px grey;
-    height: 90%;
-    margin: auto;
-    position:static;
-    transition: transform 0.3s ease;
-    width:90%;
-    
-}
-
-/*
-Here the Psuedo-class :hover has been used to highlight the selected photo of the gallery
-works by checking the state of the image object and when triggered by mouse-over applies the style changes 
-*/
-.galleryImg:hover{
-    transform: scale(1.1);
 }
 
 /*Container for the contact form */
 .formContact{
 
+    grid-template-columns: 100px 300px;
     border: 10px solid aliceblue;
-    column-gap: 5px;
+
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    margin: auto;
     row-gap: 10px;
+    column-gap: 5px;
+
+    margin: auto;
     width: fit-content;
-}
-
-
-/*
-Here the Psuedo-class :invalid has been used to highlight the form input with incorrect values 
-works by checking the state of the form input and when it trigger the invalid event, applies the style changes 
-*/
-.formInput:invalid{
-    background-color: lightcoral;
-}
-
-
-/*
-Focus psuedo class used to highlight to the user what input of the form they are about to select. 
-*/
-.formInput:focus{
-    background-color: lightblue;
-}
-
-
-/*
-Using the valid and required pseudoclasses to check if an email is enters or correctly formatted and visualise this on the form. 
-*/
-.formInput:required:valid{
-    background-color: lightgreen;
 }
 
 .formContact label{
@@ -187,22 +162,12 @@ Using the valid and required pseudoclasses to check if an email is enters or cor
 }
 
 .buttonSubmit{
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 2;
     margin: auto;
 }
-
-/*
-Here the Psuedo-class :active has been used to highlight the button when pressed. 
-works by checking the state of the button object and when triggered by clicking applies the style changes 
-*/
-.buttonSubmit:hover{
-    background-color: silver;
-}
-.buttonSubmit:active{
-    background-color: darkgrey;
-}
 footer{
+    grid-area: "footer";
     background: linear-gradient(white,lightblue, grey);
     min-height: 100px;
 }
